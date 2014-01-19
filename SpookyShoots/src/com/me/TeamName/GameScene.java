@@ -6,7 +6,8 @@ import com.me.TeamName.Engine.SceneManager;
 import com.me.TeamName.LevelStuff.Sofa;
 
 public class GameScene extends Scene {
-
+	private GhostManager ghosts;
+	
 	public GameScene() {
 		super("GameScene");
 		
@@ -24,6 +25,8 @@ public class GameScene extends Scene {
 		SceneManager.Scene().addEntity(thePlayer);
 		SceneManager.Scene().addEntity(testEnt);
 		
+		ghosts = new GhostManager();
+		
 		GrandfartherClock theClock = new GrandfartherClock();
 		SceneManager.Scene().addEntity(theClock);
 		theClock.setPosition(410,95);
@@ -37,5 +40,9 @@ public class GameScene extends Scene {
 		addEntity(aSofa);
 		aSofa.setPosition(100,640);
 	}
-
+	
+	public void Update(float dt){
+		super.Update(dt);
+		ghosts.Update();
+	}
 }

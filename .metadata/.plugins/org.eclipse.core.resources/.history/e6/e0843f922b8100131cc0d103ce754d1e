@@ -1,7 +1,0 @@
-package com.me.TeamName.LevelStuff;
-
-import com.me.TeamName.LevelObject;
-
-public class Chair extends LevelObject {
-
-}
