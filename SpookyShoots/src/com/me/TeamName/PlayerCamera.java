@@ -1,6 +1,7 @@
 package com.me.TeamName;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.me.TeamName.Engine.Input;
 import com.me.TeamName.Engine.RenderableEntity;
@@ -14,8 +15,6 @@ public class PlayerCamera extends RenderableEntity {
 	
 	private boolean canShoot = true;
 	
-	private int shotsLeft = 3;
-	
 	public PlayerCamera(){
 		super("Player Camera","cameraShutter", "data/Atlas/pack0/pack0.pack");
 		
@@ -25,6 +24,13 @@ public class PlayerCamera extends RenderableEntity {
 	}
 
 	public void Update(float dt){
+		
+		Renderer.drawText("testFont", "Film: " + LevelDataSaver.getfilmAmount(), new Vector2(
+				20 ,
+				30),
+				1, 1, 
+				1, 1);
+		
 		position = Input.getTouchedPosition();
 		
 		if (canShoot){
@@ -34,28 +40,25 @@ public class PlayerCamera extends RenderableEntity {
 		}
 		
 		if (Input.getTouchedReleased() && canShoot){
-				shotsLeft--;
-				CameraFlash theFlash = new CameraFlash();
-				SceneManager.Scene().addEntity(theFlash);
-				canShoot = false;
-				
-				TextureRegion screenShot = new TextureRegion(ScreenUtils.getFrameBufferTexture(
-						(int) (position.x - origin.x), 
-						(int) (Renderer.getCameraSize().y - (position.y + origin.y) ), 
-						(int) sourceRectangle.width,
-						(int) sourceRectangle.height));
-				
-				LevelDataSaver.addImage(screenShot);
-				
-				//RenderableEntity test = new RenderableEntity("test");
-				//test.changeFromTextureRegion(screenShot);
-				//test.setLayer("Foreground");
-				//LevelDataSaver.addImage(test);
-				//SceneManager.Scene().addEntity(test);
-				//test.setPosition(100,100);
-				
-				if (shotsLeft == 0){
-				SceneManager.switchScene("ShopScene");
+				if (LevelDataSaver.getfilmAmount() != 0){
+				 	LevelDataSaver.subtractFilm();
+					CameraFlash theFlash = new CameraFlash();
+					SceneManager.Scene().addEntity(theFlash);
+					canShoot = false;
+					
+					TextureRegion screenShot = new TextureRegion(ScreenUtils.getFrameBufferTexture(
+							(int) (position.x - origin.x), 
+							(int) (Renderer.getCameraSize().y - (position.y + origin.y) ), 
+							(int) sourceRectangle.width,
+							(int) sourceRectangle.height));
+					
+					LevelDataSaver.addImage(screenShot, 100);
+					
+					if ( LevelDataSaver.getfilmAmount() == 0){
+						SceneManager.switchScene("ShopScene");
+					}
+				}else{
+					SceneManager.switchScene("ShopScene");
 				}
 		}
 		

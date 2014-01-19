@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
 import com.me.TeamName.Engine.Renderer;
 import com.me.TeamName.Engine.Scene;
+import com.me.TeamName.Engine.SceneManager;
 import com.me.TeamName.Engine.UI.Button;
 import com.me.TeamName.Engine.UI.ScrollView;
 
@@ -33,6 +34,12 @@ public class ShopScene extends Scene {
 		}
 		
 		scrollView.setMaxScrollVert(-scrollLength);
+		
+		ButtonShop theBuyButton = new ButtonShop();
+		theBuyButton.setPosition(Renderer.getCameraSize().x -theBuyButton.getSourceRectangle().width,
+				Renderer.getCameraSize().y -theBuyButton.getSourceRectangle().height);
+		
+		addEntity(theBuyButton);
 	}
 	
 	private void createScrollView(float _startScroll){
