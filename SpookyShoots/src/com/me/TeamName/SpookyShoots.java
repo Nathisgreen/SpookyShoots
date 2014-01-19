@@ -28,17 +28,11 @@ public class SpookyShoots implements ApplicationListener {
 		SceneManager.Init();
 		SoundManager.Init();
 		Input.Init();
-		Renderer.Init(1200, 720);
-		RenderableEntity testEnt = new RenderableEntity("test");
+		Renderer.Init(1024, 768);
 		
-		SceneManager.addScene(new Scene("TestScene"));
-		SceneManager.switchScene("TestScene");
-		testEnt.createFromSprite("Test", "data/libgdx.png");
-		SceneManager.Scene().addEntity(testEnt);
-		Ghost ghost = new Ghost();
-		SceneManager.Scene().addEntity(ghost);
-		
-		//LoadContent theContent = new LoadContent();
+		LoadContent theContent = new LoadContent();
+
+
 	}
 
 	@Override

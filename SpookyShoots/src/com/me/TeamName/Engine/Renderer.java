@@ -92,18 +92,8 @@ public class Renderer {
 	static private void loadLayers()
 	{
 		addLayer("BackGround", true);
-		addLayer("SectionBackGroundFurther1", true);
-		addLayer("Turbines", true);
-		addLayer("SectionBackGroundFurther", true);
-		addLayer("SectionBackGround", true);
-		addLayer("SmallWalls" , true);
-		addLayer("Default", true);
-		addLayer("Player", true);
-		addLayer("CloudFront", true);
-		addLayer("Walls", true);
-		addLayer("Bullets", true);
-		addLayer("HUD" , true);
-		addLayer("PauseMenu" , true);
+		addLayer("Game", true);
+		addLayer("Foreground" , true);
 	}
 
 	static void addLayer(String name, Boolean active)

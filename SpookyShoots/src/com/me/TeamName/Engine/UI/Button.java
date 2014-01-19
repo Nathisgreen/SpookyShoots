@@ -15,6 +15,11 @@ public class Button extends BaseUI {
 	
 	private boolean canClick;
 	
+	public Button(){
+		super("Button");
+		canClick = true;
+	}
+	
 	public Button(String _imageName, String _atlasName){
 		super("Button",_imageName, _atlasName);
 		canClick = true;

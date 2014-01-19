@@ -58,7 +58,7 @@ public class RenderableEntity extends BaseEntity{
 		active = true;
 		rotation = 0;
 		alpha = 1;
-		layer = "Default";
+		layer = "Game";
 		color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 	}
 	
@@ -107,6 +107,20 @@ public class RenderableEntity extends BaseEntity{
 		textureRegion = new TextureRegion(ContentManager.getTexture(_filePath));
 		//textureRegion.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		size = new Vector2(ContentManager.getTexture(_filePath).getWidth(),ContentManager.getTexture(_filePath).getHeight());
+		boundingBox.width = size.x;
+		boundingBox.height = size.y;
+		sourceRectangle.width = size.x;
+		sourceRectangle.height =size.y;
+	}
+	
+	/**
+	 * Used to change a sprite at some point after initialisation
+	 * @param _filePath
+	 */
+	public void changeFromTextureRegion(TextureRegion _filePath){
+		textureRegion = _filePath;
+		//textureRegion.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
+		size = new Vector2(textureRegion.getTexture().getWidth(),textureRegion.getTexture().getHeight());
 		boundingBox.width = size.x;
 		boundingBox.height = size.y;
 		sourceRectangle.width = size.x;
