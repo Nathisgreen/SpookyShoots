@@ -37,6 +37,8 @@ public class SpookyShoots implements ApplicationListener {
 		
 		//Quick test ent
 		testEnt.createFromSprite("Test", "data/Backgrounds/Halloweenparty.png");
+		testEnt.setLayer("BackGround");
+		
 		SceneManager.Scene().addEntity(thePlayer);
 		SceneManager.Scene().addEntity(testEnt);
 

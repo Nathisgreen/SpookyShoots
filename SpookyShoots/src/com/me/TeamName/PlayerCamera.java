@@ -9,6 +9,8 @@ public class PlayerCamera extends RenderableEntity {
 		super("Player Camera","cameraShutter", "data/Atlas/pack0/pack0.pack");
 		
 		setOrigin(sourceRectangle.width/2, sourceRectangle.height/2);
+		
+		setLayer("Game");
 	}
 
 	public void Update(float dt){

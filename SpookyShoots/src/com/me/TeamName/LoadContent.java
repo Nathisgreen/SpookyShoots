@@ -10,7 +10,6 @@ public class LoadContent {
 		
 		ContentManager.loadAtlas("data/Atlas/pack0/pack0.pack");
 		
-		
 		//Quick test Scene
 		SceneManager.addScene(new Scene("TestScene"));
 		SceneManager.switchScene("TestScene");
