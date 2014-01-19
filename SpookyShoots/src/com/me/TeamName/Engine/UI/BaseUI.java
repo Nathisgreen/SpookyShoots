@@ -30,6 +30,10 @@ public class BaseUI extends RenderableEntity{
 		super( _type, _imageName, _atlasName);
 	}
 	
+	public BaseUI(String _type){
+		super( _type);
+	}
+	
 	@Override
 	public void Update(float dt){
 		if (!hasCreated){

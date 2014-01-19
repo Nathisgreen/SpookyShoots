@@ -15,7 +15,6 @@ public class GameScene extends Scene {
 		super.SceneBegin();
 		PlayerCamera thePlayer = new PlayerCamera();
 		
-		
 		RenderableEntity testEnt = new RenderableEntity("Background");
 		//Quick test ent
 		testEnt.createFromSprite("Background", "data/Backgrounds/Halloweenparty.png");
@@ -23,6 +22,10 @@ public class GameScene extends Scene {
 		
 		SceneManager.Scene().addEntity(thePlayer);
 		SceneManager.Scene().addEntity(testEnt);
+		
+		GrandfartherClock theClock = new GrandfartherClock();
+		SceneManager.Scene().addEntity(theClock);
+		theClock.setPosition(410,95);
 	}
 
 }
