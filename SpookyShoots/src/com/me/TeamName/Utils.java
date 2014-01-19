@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 
 public class Utils {
 	static Utils instance;
+	public int money;
 	
 	// constructor
 	private Utils(){

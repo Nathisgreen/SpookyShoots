@@ -92,7 +92,7 @@ public class Ghost extends RenderableEntity {
 		
 		float distance = position.dst2(moveTo);
 		float totalDistance = startPos.dst2(moveTo);
-		alpha = 0.005f+( (distance / totalDistance)) * 0.655f;
+		alpha = 0.2f+( (distance / totalDistance)) * 0.8f;
 	
 		if(Utils.getInstance().rangeCheckVector2(moveTo, position, 10)){
 			moveTo = possiblePossitions.get(((int)(Math.random()*possiblePossitions.size)));

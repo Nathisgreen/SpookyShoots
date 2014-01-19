@@ -1,0 +1,390 @@
+
+pack0.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+cameraShutter
+  rotate: false
+  xy: 1, 377
+  size: 256, 128
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+buyFilmBtn
+  rotate: false
+  xy: 1, 255
+  size: 256, 120
+  orig: 256, 120
+  offset: 0, 0
+  index: -1
+buySizeBtn
+  rotate: false
+  xy: 259, 385
+  size: 256, 120
+  orig: 256, 120
+  offset: 0, 0
+  index: -1
+buySpeedBtn
+  rotate: false
+  xy: 1, 133
+  size: 256, 120
+  orig: 256, 120
+  offset: 0, 0
+  index: -1
+exitBtn
+  rotate: false
+  xy: 259, 263
+  size: 256, 120
+  orig: 256, 120
+  offset: 0, 0
+  index: -1
+CameraLens
+  rotate: false
+  xy: 517, 377
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+sprButton
+  rotate: false
+  xy: 1, 67
+  size: 192, 64
+  orig: 192, 64
+  offset: 0, 0
+  index: -1
+Sofa
+  rotate: false
+  xy: 259, 197
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+SofaPossessed
+  rotate: false
+  xy: 517, 311
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+CoffeeTablePossessed
+  rotate: false
+  xy: 647, 477
+  size: 144, 28
+  orig: 144, 28
+  offset: 0, 0
+  index: -1
+ClockAnim
+  rotate: false
+  xy: 647, 347
+  size: 42, 128
+  orig: 42, 128
+  offset: 0, 0
+  index: 0
+ClockAnim
+  rotate: false
+  xy: 691, 347
+  size: 42, 128
+  orig: 42, 128
+  offset: 0, 0
+  index: 1
+ClockAnim
+  rotate: false
+  xy: 735, 347
+  size: 42, 128
+  orig: 42, 128
+  offset: 0, 0
+  index: 2
+CoffeeTable
+  rotate: false
+  xy: 1, 49
+  size: 128, 16
+  orig: 128, 16
+  offset: 0, 0
+  index: -1
+ClockAnim
+  rotate: false
+  xy: 779, 347
+  size: 42, 128
+  orig: 42, 128
+  offset: 0, 0
+  index: 3
+painting1Anim
+  rotate: false
+  xy: 389, 189
+  size: 72, 72
+  orig: 72, 72
+  offset: 0, 0
+  index: 0
+painting1Anim
+  rotate: false
+  xy: 259, 123
+  size: 72, 72
+  orig: 72, 72
+  offset: 0, 0
+  index: 1
+LampPossessed
+  rotate: false
+  xy: 823, 377
+  size: 34, 128
+  orig: 34, 128
+  offset: 0, 0
+  index: -1
+Lamp
+  rotate: false
+  xy: 859, 377
+  size: 32, 128
+  orig: 32, 128
+  offset: 0, 0
+  index: -1
+painting1Anim
+  rotate: false
+  xy: 893, 433
+  size: 72, 72
+  orig: 72, 72
+  offset: 0, 0
+  index: 2
+painting2
+  rotate: false
+  xy: 893, 365
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: 0
+painting2
+  rotate: false
+  xy: 463, 195
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: 1
+oven
+  rotate: false
+  xy: 195, 67
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 0
+oven
+  rotate: false
+  xy: 333, 131
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 1
+Chair
+  rotate: false
+  xy: 387, 129
+  size: 64, 58
+  orig: 64, 58
+  offset: 0, 0
+  index: -1
+washMachine
+  rotate: false
+  xy: 967, 441
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 0
+Fireplace
+  rotate: false
+  xy: 249, 57
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+GhostMove
+  rotate: false
+  xy: 1, 7
+  size: 64, 40
+  orig: 64, 40
+  offset: 0, 0
+  index: 1
+GhostMove
+  rotate: false
+  xy: 517, 271
+  size: 64, 38
+  orig: 64, 38
+  offset: 0, 0
+  index: 2
+FireplacePossessed
+  rotate: false
+  xy: 531, 205
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+LowWallpaper
+  rotate: false
+  xy: 647, 281
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Wallpaper
+  rotate: false
+  xy: 713, 281
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+washMachine
+  rotate: false
+  xy: 779, 281
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 1
+GhostStatic
+  rotate: false
+  xy: 597, 253
+  size: 48, 56
+  orig: 48, 56
+  offset: 0, 0
+  index: 1
+GhostStatic
+  rotate: false
+  xy: 597, 195
+  size: 48, 56
+  orig: 48, 56
+  offset: 0, 0
+  index: 2
+washMachine
+  rotate: false
+  xy: 647, 215
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 2
+washMachine
+  rotate: false
+  xy: 701, 215
+  size: 52, 64
+  orig: 52, 64
+  offset: 0, 0
+  index: 3
+PosTVAnim
+  rotate: false
+  xy: 755, 215
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 1
+PosTVAnim
+  rotate: false
+  xy: 795, 215
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 10
+PosTVAnim
+  rotate: false
+  xy: 315, 57
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 11
+Radio
+  rotate: false
+  xy: 67, 1
+  size: 38, 46
+  orig: 38, 46
+  offset: 0, 0
+  index: -1
+PosTVAnim
+  rotate: false
+  xy: 833, 311
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 12
+PosTVAnim
+  rotate: false
+  xy: 835, 245
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 13
+PosTVAnim
+  rotate: false
+  xy: 961, 367
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 14
+PosTVAnim
+  rotate: false
+  xy: 453, 123
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 15
+PosTVAnim
+  rotate: false
+  xy: 493, 129
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 2
+PosTVAnim
+  rotate: false
+  xy: 533, 139
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 3
+PosTVAnim
+  rotate: false
+  xy: 573, 129
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 4
+PosTVAnim
+  rotate: false
+  xy: 613, 129
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 5
+PosTVAnim
+  rotate: false
+  xy: 653, 149
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 6
+PosTVAnim
+  rotate: false
+  xy: 693, 149
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 7
+PosTVAnim
+  rotate: false
+  xy: 733, 149
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 8
+PosTVAnim
+  rotate: false
+  xy: 773, 149
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: 9
+SmallLamp
+  rotate: false
+  xy: 813, 149
+  size: 38, 64
+  orig: 38, 64
+  offset: 0, 0
+  index: -1
+Ceiling
+  rotate: false
+  xy: 653, 117
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1

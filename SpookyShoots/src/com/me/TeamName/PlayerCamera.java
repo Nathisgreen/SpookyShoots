@@ -26,7 +26,15 @@ public class PlayerCamera extends RenderableEntity {
 	}
 
 	public void Update(float dt){
-		
+
+		if(// make sure We're witin the Viewport on X Axis
+				position.x < 0 || position.x > 1024 ||
+				// make sure We're witin the Viewport on Y Axis
+				position.y < 0 || position.y > 768
+		  ){
+			canShoot = false;
+		}
+	
 		Renderer.drawText("testFont", "Film: " + LevelDataSaver.getfilmAmount(), new Vector2(
 				20 ,
 				30),
@@ -49,8 +57,8 @@ public class PlayerCamera extends RenderableEntity {
 					canShoot = false;
 					
 					TextureRegion screenShot = new TextureRegion(ScreenUtils.getFrameBufferTexture(
-							(int) (position.x - origin.x), 
-							(int) (Renderer.getCameraSize().y - (position.y + origin.y) ), 
+							(int) ( position.x - origin.x), 
+							(int) ( Renderer.getCameraSize().y - (position.y + origin.y) ), 
 							(int) sourceRectangle.width,
 							(int) sourceRectangle.height));
 					
@@ -73,19 +81,18 @@ public class PlayerCamera extends RenderableEntity {
 							
 							ghostnum++;
 							if (num > 0){
-								totalScore += num;
+								totalScore += num*10;
 							}
 							
 							num = alpha * 100;
 						
 							
 							totalScore += num;
-							
-							
-						}
+							}
 					}
 					System.out.println("Ghost in picture " +ghostnum);
 					System.out.println("score: " +totalScore);
+					Utils.getInstance().money += (int)totalScore;
 					LevelDataSaver.addImage(screenShot,(int) totalScore);
 					
 					if ( LevelDataSaver.getfilmAmount() == 0){
