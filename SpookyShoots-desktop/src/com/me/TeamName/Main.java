@@ -10,6 +10,8 @@ public class Main {
 		cfg.useGL20 = false;
 		cfg.width = 1024;
 		cfg.height = 768;
+		cfg.fullscreen = false;
+		cfg.backgroundFPS = -1;
 		
 		new LwjglApplication(new SpookyShoots(), cfg);
 	}

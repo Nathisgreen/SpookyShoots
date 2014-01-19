@@ -93,7 +93,6 @@ public class Ghost extends RenderableEntity {
 		
 		float distance = position.dst2(moveTo);
 		float totalDistance = startPos.dst2(moveTo);
-		System.out.println(distance+ "is "+( (distance / totalDistance) * 100)+"% off "+totalDistance);
 		alpha = 0.005f+( (distance / totalDistance)) * 0.655f;
 	
 		if(Utils.getInstance().rangeCheckVector2(moveTo, position, 10)){
