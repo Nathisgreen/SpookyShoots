@@ -1,0 +1,7 @@
+package com.me.TeamName;
+
+import com.me.TeamName.Engine.RenderableEntity;
+
+public class ghost extends RenderableEntity {
+
+}
