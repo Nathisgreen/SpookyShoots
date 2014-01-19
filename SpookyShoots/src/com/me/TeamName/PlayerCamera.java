@@ -2,6 +2,7 @@ package com.me.TeamName;
 
 import com.me.TeamName.Engine.Input;
 import com.me.TeamName.Engine.RenderableEntity;
+import com.me.TeamName.Engine.SceneManager;
 
 public class PlayerCamera extends RenderableEntity {
 	
@@ -15,5 +16,10 @@ public class PlayerCamera extends RenderableEntity {
 
 	public void Update(float dt){
 		position = Input.getTouchedPosition();
+		
+		if (Input.getTouchedReleased()){
+			CameraFlash theFlash = new CameraFlash();
+			SceneManager.Scene().addEntity(theFlash);
+		}
 	}
 }
