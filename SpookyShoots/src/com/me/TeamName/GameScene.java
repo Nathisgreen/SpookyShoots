@@ -31,11 +31,6 @@ public class GameScene extends Scene {
 		SceneManager.Scene().addEntity(theClock);
 		theClock.setPosition(410,95);
 		
-		for (int i = 0; i < 10; i++){
-			Ghost aGhost = new Ghost();
-			addEntity(aGhost);
-		}
-		
 		Sofa aSofa = new Sofa();
 		addEntity(aSofa);
 		aSofa.setPosition(100,640);
