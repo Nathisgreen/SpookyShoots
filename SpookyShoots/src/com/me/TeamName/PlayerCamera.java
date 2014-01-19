@@ -1,7 +1,6 @@
 package com.me.TeamName;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.g3d.utils.BaseAnimationController.Transform;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.me.TeamName.Engine.Input;
 import com.me.TeamName.Engine.RenderableEntity;
@@ -26,12 +25,16 @@ public class PlayerCamera extends RenderableEntity {
 	public void Update(float dt){
 		position = Input.getTouchedPosition();
 		
+		if (canShoot){
+			setDraw(true);
+		}else{
+			setDraw(false);
+		}
+		
 		if (Input.getTouchedReleased() && canShoot){
 			CameraFlash theFlash = new CameraFlash();
 			SceneManager.Scene().addEntity(theFlash);
 			canShoot = false;
-			
-			setDraw(false);
 			
 			TextureRegion screenShot = new TextureRegion(ScreenUtils.getFrameBufferTexture(
 					(int) (position.x - origin.x), 
@@ -42,8 +45,9 @@ public class PlayerCamera extends RenderableEntity {
 			RenderableEntity test = new RenderableEntity("test");
 			test.changeFromTextureRegion(screenShot);
 			test.setLayer("Foreground");
-			SceneManager.Scene().addEntity(test);
-			test.setPosition(100,100);
+			LevelDataSaver.addImage(test);
+			//SceneManager.Scene().addEntity(test);
+			//test.setPosition(100,100);
 		}
 		
 		if (!canShoot){

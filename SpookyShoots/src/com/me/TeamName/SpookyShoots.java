@@ -29,18 +29,9 @@ public class SpookyShoots implements ApplicationListener {
 		SoundManager.Init();
 		Input.Init();
 		Renderer.Init(1024, 768);
-		RenderableEntity testEnt = new RenderableEntity("test");
 		
 		LoadContent theContent = new LoadContent();
-		
-		PlayerCamera thePlayer = new PlayerCamera();
-		
-		//Quick test ent
-		testEnt.createFromSprite("Test", "data/Backgrounds/Halloweenparty.png");
-		testEnt.setLayer("BackGround");
-		
-		SceneManager.Scene().addEntity(thePlayer);
-		SceneManager.Scene().addEntity(testEnt);
+
 
 	}
 
