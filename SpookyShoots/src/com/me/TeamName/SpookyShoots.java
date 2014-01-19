@@ -35,6 +35,9 @@ public class SpookyShoots implements ApplicationListener {
 		SceneManager.switchScene("TestScene");
 		testEnt.createFromSprite("Test", "data/libgdx.png");
 		SceneManager.Scene().addEntity(testEnt);
+		Ghost ghost = new Ghost();
+		SceneManager.Scene().addEntity(ghost);
+		
 		//LoadContent theContent = new LoadContent();
 	}
 
