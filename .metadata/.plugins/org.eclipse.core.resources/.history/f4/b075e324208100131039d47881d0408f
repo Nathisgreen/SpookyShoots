@@ -1,0 +1,47 @@
+
+pack0.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+cameraShutter
+  rotate: false
+  xy: 1, 325
+  size: 256, 128
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+Clockanim
+  rotate: false
+  xy: 1, 67
+  size: 84, 256
+  orig: 84, 256
+  offset: 0, 0
+  index: 0
+Clockanim
+  rotate: false
+  xy: 87, 67
+  size: 84, 256
+  orig: 84, 256
+  offset: 0, 0
+  index: 1
+Clockanim
+  rotate: false
+  xy: 173, 67
+  size: 84, 256
+  orig: 84, 256
+  offset: 0, 0
+  index: 2
+Clockanim
+  rotate: false
+  xy: 259, 197
+  size: 84, 256
+  orig: 84, 256
+  offset: 0, 0
+  index: 3
+sprButton
+  rotate: false
+  xy: 1, 1
+  size: 192, 64
+  orig: 192, 64
+  offset: 0, 0
+  index: -1

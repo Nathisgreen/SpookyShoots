@@ -2,7 +2,9 @@ package com.me.TeamName;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.me.TeamName.Engine.BaseEntity;
 import com.me.TeamName.Engine.Input;
 import com.me.TeamName.Engine.RenderableEntity;
 import com.me.TeamName.Engine.Renderer;
@@ -52,7 +54,39 @@ public class PlayerCamera extends RenderableEntity {
 							(int) sourceRectangle.width,
 							(int) sourceRectangle.height));
 					
-					LevelDataSaver.addImage(screenShot, 100);
+					Array<BaseEntity> allghosts = SceneManager.Scene().getEntityType("Ghost");
+					
+					System.out.println("ghost: " + allghosts.size);
+					
+					float totalScore = 0;
+					int ghostnum = 0;
+					for (int i = 0; i < allghosts.size; i++){
+						Ghost aEnt = (Ghost) allghosts.get(i);
+						
+						if (aEnt.getPosition().x > (position.x - origin.x -aEnt.getOrigin().x) && 
+								aEnt.getPosition().y  > (position.y - origin.y -aEnt.getOrigin().y) &&
+										aEnt.getPosition().x  < (position.x + origin.x + aEnt.getOrigin().x) && 
+										aEnt.getPosition().y  < (position.y + origin.y + aEnt.getOrigin().y )){
+							float dist = aEnt.getPosition().dst(position);
+							
+							float num = 100/dist;
+							
+							ghostnum++;
+							if (num > 0){
+								totalScore += num;
+							}
+							
+							num = alpha * 100;
+						
+							
+							totalScore += num;
+							
+							
+						}
+					}
+					System.out.println("Ghost in picture " +ghostnum);
+					System.out.println("score: " +totalScore);
+					LevelDataSaver.addImage(screenShot,(int) totalScore);
 					
 					if ( LevelDataSaver.getfilmAmount() == 0){
 						SceneManager.switchScene("ShopScene");

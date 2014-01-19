@@ -1,7 +1,5 @@
 package com.me.TeamName;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.me.TeamName.Engine.RenderableEntity;
@@ -20,8 +18,7 @@ public class Ghost extends RenderableEntity {
 	}
 	//-Constructors-//
 	protected Ghost(){
-		super("Entity");
-		visible = false;
+		super("Ghost", "GhostMove","data/Atlas/pack0/pack0.pack");
 		if(possiblePossitions.size == 0){
 			possiblePossitions.add(new Vector2(
 				(int)(Math.random()*1024),
@@ -57,13 +54,15 @@ public class Ghost extends RenderableEntity {
 				));
 		}
 		moveTo = possiblePossitions.get((int)(Math.random()*possiblePossitions.size));
-		createFromSprite("ghost", "data/ghostcartoon.png");
+		//createFromSprite("ghost", "data/ghostcartoon.png");
 		alpha = 0.7f;
 		if(startPos != null){
 			position = startPos;
 		}
 		startPos = new Vector2( position.x, position.y );
-		setLayer("PauseMenu");
+		setLayer("Game");
+		
+		setOrigin(sourceRectangle.width/2, sourceRectangle.height/2);
 	}
 	
 	public void toggleShowGost(){
@@ -93,7 +92,6 @@ public class Ghost extends RenderableEntity {
 		
 		float distance = position.dst2(moveTo);
 		float totalDistance = startPos.dst2(moveTo);
-		System.out.println(distance+ "is "+( (distance / totalDistance) * 100)+"% off "+totalDistance);
 		alpha = 0.005f+( (distance / totalDistance)) * 0.655f;
 	
 		if(Utils.getInstance().rangeCheckVector2(moveTo, position, 10)){
