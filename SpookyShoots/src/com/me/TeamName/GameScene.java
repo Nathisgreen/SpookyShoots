@@ -18,12 +18,18 @@ public class GameScene extends Scene {
 		PlayerCamera thePlayer = new PlayerCamera();
 		
 		RenderableEntity testEnt = new RenderableEntity("Background");
+		RenderableEntity flareEnt = new RenderableEntity("LenseFlare");
+		
 		//Quick test ent
 		testEnt.createFromSprite("Background", "data/Backgrounds/WallpaperBackground.png");
 		testEnt.setLayer("BackGround");
+
+		flareEnt.createFromSprite("Background", "data/lenseFilter_resized.png");
+		flareEnt.setLayer("Foreground");
 		
 		SceneManager.Scene().addEntity(thePlayer);
 		SceneManager.Scene().addEntity(testEnt);
+		SceneManager.Scene().addEntity(flareEnt);
 		
 		ghosts = new GhostManager();
 		
