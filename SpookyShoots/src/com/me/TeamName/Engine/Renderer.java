@@ -92,6 +92,7 @@ public class Renderer {
 	static private void loadLayers()
 	{
 		addLayer("BackGround", true);
+		addLayer("LevelStuff", true);
 		addLayer("Game", true);
 		addLayer("Foreground" , true);
 	}

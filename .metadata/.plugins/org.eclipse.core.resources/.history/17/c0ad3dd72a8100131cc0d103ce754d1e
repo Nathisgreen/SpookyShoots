@@ -1,0 +1,7 @@
+package com.me.TeamName.LevelStuff;
+
+import com.me.TeamName.LevelObject;
+
+public class Sofa extends LevelObject {
+
+}
